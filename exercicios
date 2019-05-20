@@ -69,3 +69,87 @@ int main() {
     printf("\nA palavra inserida eh um palindromo.");
 }
 -----------------------------------------------------
+//a partir de duas strigs ve os elementos iguais e gera uma terceira.
+
+#include <stdio.h>
+int main()
+{
+    char A[101],B[101],C[101];
+    int tamA,tamB,cont=0,achei=0;
+
+    setbuf(stdin,NULL);
+    fgets(A,101,stdin);
+    fgets(B,101,stdin);
+    tamA= strlen(A);
+    tamB= strlen(B);
+
+     for(int i=0;i<101;i++){
+        for(int j;j<101;j++){
+           if(A[i]!=B[j]){
+            for(int k=0;k<cont;k++){
+                if(A[i]!=C[k]){
+                    achei=1;
+                    k=cont;
+                }
+                if(B[j]!=C[k]){
+                    achei=1;
+                    k=cont;
+                }
+            }
+            if(achei!=1){
+                C[cont]=A[i];
+                cont++;
+            }
+            achei=0;
+           }
+        }
+     }
+     C[cont]='\0';
+    puts(C);
+  return 0;
+}
+-----------------------------------------------------
+//utiliza uma struct para calcular a media de 10 alunos cada um tendo 3 notas cada.
+
+#include <stdio.h>
+int main()
+{
+   struct dados{
+        int ra;
+        int notas[3];
+   };
+
+   int i=0,j=0,soma=0,media=0;
+   struct dados vet[3];
+
+    for(i=0;i<10;i++){
+        printf("digite seu ra: ");
+        scanf("%d",vet[i].ra);
+        printf("digite a suas 3 notas:\n ");
+        for(j=0;j<3;j++){
+            scanf("%d",&vet[i].notas[j]);
+            soma+=vet[i].notas[j];
+
+       }
+           media=soma/3;
+     }
+    for(i=0;i<10;i++){
+        printf("O seu ra eh: %d",vet[i].ra);
+        printf("e sua media eh:);
+        for(j=0;j<3;j++){
+        printf("%d",media);
+        }
+    }
+
+  return 0;
+}
+-----------------------------------------------------
+
+
+
+
+
+
+
+
+
