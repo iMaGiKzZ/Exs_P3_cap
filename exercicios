@@ -25,7 +25,7 @@ int main()
     return 0;
 }
 -----------------------------------------------------
-//Inverter uma matriz SEM auxiliar.
+//Inverter uma string SEM auxiliar.
 
 int main(){
     char mat[10];
@@ -38,7 +38,7 @@ int main(){
 return 0;
 }
 -----------------------------------------------------
-//Inverter uma matriz COM auxiliar.
+//Inverter uma string COM auxiliar.
 
 int main(){
     char mat[10],copia[10];
