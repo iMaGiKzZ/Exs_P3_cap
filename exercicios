@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define N 3
+----------------------------------------------------
+//Maior elemento de uma matriz.
+
+int main()
+{
+    int mat[N][N], maior=mat[0][0];
+    int i,j;
+    for(i=0;i<N;i++){
+        for(j=0;j<N;j++){
+            scanf("%d ",&mat[i][j]);
+        }
+    }
+    for(i=0;i<N;i++){
+       for(j=0;j<N;j++){
+            if(mat[i][j]>maior){
+                maior=mat[i][j];
+             }
+       }
+    }
+    printf("O maior valor eh %d\n", maior);
+
+    return 0;
+}
+-----------------------------------------------------
+//Inverter uma matriz SEM auxiliar.
+
+int main(){
+    char mat[10];
+    int i;
+    gets(mat);
+    for(i=strlen(mat)-1;i>=0;i--){
+      printf("%c",mat[i]);
+    }
+   printf("\n");
+return 0;
+}
+-----------------------------------------------------
+//Inverter uma matriz COM auxiliar.
+
+int main(){
+    char mat[10],copia[10];
+    int i,j=0;
+    gets(mat);
+    for(i=strlen(mat)-1;i>=0;i--){
+        copia[j]=mat[i];
+        j++;
+    }
+    copia[j]='\n';
+    printf("a string inversa eh %s\n",copia);
+return 0;
+}
+-----------------------------------------------------
