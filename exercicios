@@ -1,5 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+#include <string.h>
+----------------------------------------------------
+//Leia uma matriz 4x4 e troque os valores da 1ª linha com os valores da 4º linha
+
+int main (){
+    int i,j,aux_troca;
+    int matriz[4][4];
+    for (i = 0; i<4; i++){
+        for (j = 0; j<4; j++)
+            scanf("%i",&matriz[i][j]);
+    }
+
+    for (j=0; j<4; j++){
+        aux_troca = matriz[0][j];
+        matriz[0][j] = matriz[3][j];
+        matriz[3][j] = aux_troca;
+    }
+    for (i = 0; i<4; i++){
+        for (j = 0; j<4; j++){
+            printf("%i ",matriz[i][j]);
+        }
+    printf ("\n");
+    }
+}
 ----------------------------------------------------
 //Neste problema você deverá ler 15 valores colocá-los em 2 vetores conforme estes valores forem pares ou ímpares.
 Só que o tamanho de cada um dos dois vetores é de 5 posições. 
