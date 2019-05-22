@@ -80,24 +80,28 @@ int main()
 
 int main()
 {
-    int mat[N][N], maior=mat[0][0];
-    int i,j;
+    int mat[N][N];
+    int i=0,j=0,im=0,jm=0;
     for(i=0;i<N;i++){
         for(j=0;j<N;j++){
             scanf("%d ",&mat[i][j]);
         }
     }
+    int maior=mat[0][0];
     for(i=0;i<N;i++){
        for(j=0;j<N;j++){
             if(mat[i][j]>maior){
                 maior=mat[i][j];
+                im=i;
+                jm=j;
              }
        }
     }
-    printf("O maior valor eh %d\n", maior);
+    printf("O maior valor eh %d e esta na linha %d e coluna %d\n", maior,im,jm);
 
-    return 0;
+return 0;
 }
+
 -----------------------------------------------------
 //Inverter uma string SEM auxiliar.
 
